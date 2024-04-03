@@ -1,0 +1,15 @@
+<div class="wrapper">
+  <form [formGroup]="loginForm" (ngSubmit)="loginSend()" class="form">
+    <div class="input-wrap">
+      <input type="email" formControlName="email" class="input">
+      <p class="input-error" *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">Login - error</p>
+    </div>
+    <div class="input-wrap">
+      <input type="password" formControlName="password" class="input">
+      <p class="input-error" *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">Password - error</p>
+    </div>
+    <div class="btn-wrap">
+      <button class="btn btn-submit" type="submit" [disabled]="loginForm.invalid">Send</button>
+    </div>
+  </form>
+</div>

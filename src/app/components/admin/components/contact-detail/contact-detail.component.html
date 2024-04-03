@@ -1,0 +1,8 @@
+<div class="card-user" *ngIf="user | async as user">
+  <p class="card-user__name"><b>Name user:</b> {{user.name.firstname | titlecase }} {{user.name.lastname | titlecase}}</p>
+  <p class="card-user__email"><b>Email:</b> {{user.email}}</p>
+  <p class="card-user__tel"><b>Phone number:</b> {{user.phone}}</p>
+  <p class="card-user__city"><b>City:</b> {{user.address.city | titlecase}}</p>
+  <p class="card-user__street"><b>Street:</b> {{user.address.street | titlecase}}</p>
+  <a class="link card-user__link" routerLink="../">Return to list contacts</a>
+</div>

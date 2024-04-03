@@ -1,0 +1,7 @@
+<div class="list">
+  <div class="list-item" *ngFor="let user of personalList | async">
+    <p class="list-item__name">{{user.name.firstname | titlecase }} {{user.name.lastname | titlecase}}</p>
+    <p class="list-item__email">Email: {{user.email}}</p>
+    <a class="list-item__link" [routerLink]="['user', user.id]">Detail info</a>
+  </div>
+</div>
